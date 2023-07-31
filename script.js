@@ -29,18 +29,21 @@ function execRequest(e){
                 </div>
             </div>
             `
-            document.querySelector("#voltar").addEventListener('click', () => {
-                location.reload()
-            });
         }else {
             obj = JSON.parse(xhr.response);
             divConteudo.innerHTML = 
             `
             <div id="errMsg">
                 Usuário não encontrado...
+                <div id="refresh">
+                    <input type="button" value="Voltar" id="voltar">
+                </div>
             </div>
             `
         }
+        document.querySelector("#voltar").addEventListener('click', () => {
+            location.reload()
+        });
         
     }
     xhr.open("GET", apiUrl + username.value, true);

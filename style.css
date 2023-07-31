@@ -80,7 +80,7 @@ input {
 }
 
 img{
-    height: 300px;
+    max-width: 250px;
     border-radius: 50%;
 }
 
